@@ -1,0 +1,29 @@
+{
+  "name": "demotodo_be",
+  "version": "1.0.0",
+  "description": "backend for demotodo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmriS1996/demotodo_be.git"
+  },
+  "author": "Omri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OmriS1996/demotodo_be/issues"
+  },
+  "homepage": "https://github.com/OmriS1996/demotodo_be#readme",
+  "dependencies": {
+    "@nearform/sql": "^1.9.0",
+    "ajv": "^8.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "fluent-json-schema": "^3.0.1",
+    "mysql": "^2.18.1",
+    "uuid": "^8.3.2"
+  }
+}

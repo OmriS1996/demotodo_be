@@ -4,7 +4,6 @@ const SQL = require("@nearform/sql");
 const { query } = require("../data/mysqldb");
 const { validationMid } = require("../middlewares/validation");
 const { v4: uuidv4 } = require("uuid");
-require("dotenv").config();
 
 const router = express.Router();
 
@@ -16,12 +15,11 @@ router.post("/", validationMid(schema.valueOf()), async (req, res) => {
       SQL`SELECT * FROM users WHERE userName = ${req.body.name};`
     );
     if (user[0]) {
-      console.log(user);
       res.send({ userName: user[0].userName, userId: user[0].userId });
       return;
     } else {
       const uid = uuidv4();
-      const insertUser = await query(
+      await query(
         SQL`INSERT INTO users (userId, userName) VALUES (${uid},${req.body.name});`
       );
 
